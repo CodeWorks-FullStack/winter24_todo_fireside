@@ -5,6 +5,10 @@ class TodosService {
     const todos = await dbContext.Todos.find()
     return todos
   }
+  async createTodo(todoData) {
+    const todo = await dbContext.Todos.create(todoData)
+    return todo
+  }
 }
 
 export const todosService = new TodosService()
